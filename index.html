@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Political Spectrum Test</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>See where you stand.</h1>
+        <fieldset class="form-group">
+        <legend>Question 1</legend>
+        <h5>Donald Trump is great.</h5>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question1" value="0">
+            Strongly Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question1" value="1">
+            Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question1" value="2">
+            Neither Agree Nor Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question1" value="3">
+            Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question1" value="4">
+            Strongly Disagree
+          </label><br>
+        </div>
+        <legend>Question 2</legend>
+        <h5>Donald Trump is great.</h5>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question2" value="0">
+            Strongly Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question2" value="1">
+            Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question2" value="2">
+            Neither Agree Nor Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question2" value="3">
+            Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question2" value="4">
+            Strongly Disagree
+          </label><br>
+        </div>
+        <legend>Question 3</legend>
+        <h5>Donald Trump is great.</h5>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question3" value="0">
+            Strongly Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question3" value="1">
+            Agree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question3" value="2">
+            Neither Agree Nor Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question3" value="3">
+            Disagree
+          </label><br>
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="question3" value="4">
+            Strongly Disagree
+          </label><br>
+        </div>
+        <button type="button" onclick="calculateScore()" class="btn btn-primary">Submit</button><br>
+        <p id="result"></p>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script>
+          function calculateScore() {
+            var numQuestions = 3;
+            var numOptions = 5;
+            var score = 0;
+            for (var i=1; i<=numQuestions; i++) {
+            var question = document.getElementsByName('question'+i);
+              for (var j=0; j<numOptions; j++) {
+                if (question[j].checked) {
+                  score += parseInt(question[j].value);
+                  //console.log(parseInt(question[j].value));
+                }
+              }
+            }
+            document.getElementById("result").innerHTML = score;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
