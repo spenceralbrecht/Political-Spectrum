@@ -1,0 +1,21 @@
+#result_banner {
+  background-color: #1839C0;
+  /* align-items: center; */
+  /* align-content: center; */
+}
+
+#result_banner h1 {
+  text-align: center;
+  height: 3em;
+}
+
+#submit_btn {
+  align-items: center;
+  /* background-color: #ffffff; */
+  align-content: center;
+  align-self: center;
+}
+
+#calc_score {
+  padding-top: 1em;
+}
